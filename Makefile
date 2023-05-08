@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: irivero- <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 10:09:23 by irivero-          #+#    #+#              #
-#    Updated: 2023/05/03 10:15:33 by irivero-         ###   ########.fr        #
+#    Updated: 2023/05/08 14:41:32 by irivero-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME = libft
 SRC = ft_*.c
 OBJ = $(SRC:.c=.o)
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
@@ -32,3 +32,5 @@ clean:
 	
 fclean:	clean
 	rm -f $(NAME)
+
+re: fclean all
