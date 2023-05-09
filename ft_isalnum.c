@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irivero- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:12:35 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/03 11:22:32 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:25:11 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdbool.h>
-#include <stdio.h>
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

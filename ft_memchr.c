@@ -6,12 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 09:32:29 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/08 10:24:19 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:28:37 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

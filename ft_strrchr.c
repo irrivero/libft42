@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irivero- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:36:51 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/05 13:00:36 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:32:22 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

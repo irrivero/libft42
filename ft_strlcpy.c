@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irivero- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:41:51 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/03 16:53:30 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:31:11 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

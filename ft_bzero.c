@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irivero- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:15:01 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/03 13:38:42 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:24:20 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
