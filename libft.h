@@ -6,12 +6,16 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 14:44:00 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/08 14:50:23 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:29:12 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
 
 int	ft_atoi(const char *nptr)
 int	ft_isalnum(int c)

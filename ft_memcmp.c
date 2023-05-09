@@ -6,12 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:26:08 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/08 11:19:00 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:28:56 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

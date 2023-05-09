@@ -6,11 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 12:44:16 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/08 13:57:59 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:32:07 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <stdio.h>
+ #include "libft.h"
  
 size_t	ft_strlen(const char *s)
 {
