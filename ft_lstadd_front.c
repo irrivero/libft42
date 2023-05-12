@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 14:42:08 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/11 14:50:59 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 09:17:42 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst)
-	
-	content 
-	next
+	if (!lst || !new)
+		return (NULL);
+	new->next = *lst; //adds the node new to the address(using pointer next) of the first link lst
+	*lst = new;
 }

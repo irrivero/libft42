@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 13:54:36 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 09:28:51 by irivero-         ###   ########.fr       */
+/*   Created: 2023/05/12 10:49:26 by irivero-          #+#    #+#             */
+/*   Updated: 2023/05/12 11:12:20 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*retorno;
+	t_list	*newl;
+	t_list	*newn;
 	
-	retorno = (t_list *)malloc(sizeof(retorno));
-	if (!retorno)
+	if (!lst || !f)
 		return (NULL);
-	retorno->next = NULL;
-	retorno->content = content;
-	return(retorno);
+	newl = NULL;
+	while (lst)
+	{
+		newn = ft_lstnew(f(lst->content));
+		if (!newn)
+		{
+			ft_lstclear(&new, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newl, newn);
+		lst = lst->next;
+	}
+	return (newl);
 }

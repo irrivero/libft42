@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 13:54:36 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 09:28:51 by irivero-         ###   ########.fr       */
+/*   Created: 2023/05/12 09:30:41 by irivero-          #+#    #+#             */
+/*   Updated: 2023/05/12 09:37:36 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*retorno;
-	
-	retorno = (t_list *)malloc(sizeof(retorno));
-	if (!retorno)
+	if (!lst)
 		return (NULL);
-	retorno->next = NULL;
-	retorno->content = content;
-	return(retorno);
+	while (lst)
+	{
+		if (lst->next = NULL)
+			return (lst);
+		lst = lst->next;
+	}
+	return (lst);
 }
