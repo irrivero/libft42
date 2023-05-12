@@ -6,23 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 12:44:16 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 09:32:07 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:13:29 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
  #include "libft.h"
- 
-size_t	ft_strlen(const char *s)
-{
-	int	count;
-
-	count = 0;
-	while (s[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

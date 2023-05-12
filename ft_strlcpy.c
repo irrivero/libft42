@@ -6,23 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:41:51 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 09:31:11 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:13:12 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	int	count;
-
-	count = 0;
-	while (s[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

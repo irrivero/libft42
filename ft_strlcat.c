@@ -6,37 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 10:32:08 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 09:30:54 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:13:05 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strcpy(char	*dest, const char *src)
-{	
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	int	count;
-
-	count = 0;
-	while (s[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

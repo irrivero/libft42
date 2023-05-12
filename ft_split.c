@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:36:24 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/11 10:13:16 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 12:53:33 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static int	count_words(char c, const char *s) //cuenta las substrings al dividir
 {
 	int	mas;
 	
+	mas = 0;
 	while(*s)
 	{
 		if (*s != c)
@@ -93,8 +94,9 @@ int main()
     while (result[i] != NULL)
     {
         printf("%s\n", result[i]);
-        i++;
-    }
-
-    return 0;
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return 0;
 }*/

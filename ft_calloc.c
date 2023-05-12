@@ -6,21 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 09:36:46 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 15:06:47 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:10:40 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memset(void *s, int c, size_t n)
-{
-	unsigned char	*p;
-
-	p = s;
-	while (n--)
-		*p++ = (unsigned char)c;
-	return (s);
-}
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
