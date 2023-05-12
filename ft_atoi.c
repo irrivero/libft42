@@ -6,19 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:59:06 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 09:22:00 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:10:00 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isdigit(int c)
-{
-	if (c < 48 || c > 57)
-		return (false);
-	else
-		return (true);
-}
 
 int	ft_atoi(const char *nptr)
 {

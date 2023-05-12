@@ -6,27 +6,11 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:12:35 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 09:25:11 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:10:59 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isalpha(int c)
-{
-	if ((c < 65 || c > 90) && (c < 97 || c > 122))
-		return (false);
-	else
-		return (true);
-}
-
-int	ft_isdigit(int c)
-{
-	if (c < 48 || c > 57)
-		return (false);
-	else
-		return (true);
-}
 
 int	ft_isalnum(int c)
 {
