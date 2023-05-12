@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 14:44:00 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 14:21:02 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/12 14:35:28 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 # include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+void	ft_add_char(char *s);
+void	ft_add_index(unsigned int index, char *s);
+void	ft_fill_a(char *s);
+char	ft_toupper_char(char c);
+char	ft_toindex(unsigned int index, char c);
+
+int		main(void);
 typedef struct		s_list
 {
 	void			*content;
