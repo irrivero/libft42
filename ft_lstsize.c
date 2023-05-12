@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 13:54:36 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 09:28:51 by irivero-         ###   ########.fr       */
+/*   Created: 2023/05/12 09:18:11 by irivero-          #+#    #+#             */
+/*   Updated: 2023/05/12 09:30:20 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*retorno;
-	
-	retorno = (t_list *)malloc(sizeof(retorno));
-	if (!retorno)
-		return (NULL);
-	retorno->next = NULL;
-	retorno->content = content;
-	return(retorno);
+	int	i; //to count the length of the list
+
+	i = 0;
+	while (lst)
+	{
+		lst->next = lst; //everytime it counts the node adds 1 to i
+		i++;
+	}
+	return (i);
 }
