@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 12:18:22 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/10 12:41:12 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 09:26:05 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 && !s2) //se comprueba que char es nula y se devuelve la que no es
 		return (NULL);
 	if (!s1 && s2)
-		return (s2);
+		return ((char *)s2);
 	if (s1 && !s2)
-		return (s1);
+		return ((char *)s1);
 	lens1 = ft_strlen((char *) s1); //se calcula la long de las cadenas
 	lens2 = ft_strlen(s2);
 	total = lens1 + lens2 + 1;

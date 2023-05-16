@@ -6,7 +6,7 @@
 #    By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 10:09:23 by irivero-          #+#    #+#              #
-#    Updated: 2023/05/12 14:34:50 by irivero-         ###   ########.fr        #
+#    Updated: 2023/05/16 10:24:05 by irivero-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC = ft_isalpha.c		\
 		ft_toupper.c	\
 		ft_tolower.c	\
 		ft_strchr.c		\
+		ft_strrchr.c	\
 		ft_strncmp.c	\
 		ft_memchr.c		\
 		ft_memcmp.c		\
@@ -49,10 +50,9 @@ SRC = ft_isalpha.c		\
 		ft_putchar_fd.c	\
 		ft_putstr_fd.c	\
 		ft_putendl_fd.c	\
-		ft_putnbr_fd.c	\
-		main.c
+		ft_putnbr_fd.c	
 
-SRCB = ft_lstnew.c 			\
+SRCB:= ft_lstnew.c 			\
 		ft_lstadd_front.c	\
 		ft_lstsize.c		\
 		ft_lstlast.c		\
@@ -63,34 +63,27 @@ SRCB = ft_lstnew.c 			\
 		ft_lstmap.c			\
 		$(SRC)
 
-SRC_DIR = ./
-SRC_A = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
-SRC_B = $(addprefix $(SRCB_DIR), $(addsuffix .c, $(SRCB)))
-
 OBJ_DIR = ./
-OBJ_A = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC))
-OBJ_B = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRCB)))
+OBJ_A = $(SRC:%.c=$(OBJ_DIR)%.o)
+OBJ_B = $(SRCB:%.c=$(OBJ_DIR)%.o)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CC) $(CCFLAGS) -c $< -o $@
+	@$(CC) $(CCFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ_A)
-	$(AR) $(ARFLAGS) $@ $^
+	@$(AR) $@ $^
 
 bonus: $(OBJ_B)
-	$(AR) $(ARFLAGS) $(NAME) $^
+	@$(AR) $(NAME) $^
 
-OBJ = $(SRC:.c=.o)
-OBJB = $(SRCB:.c=.o)
-
-.PHONY: bonus all clean fclean re
+.PHONY: all bonus clean fclean re
 
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJ_A) $(OBJ_B) 
+	@$(RM) $(OBJ_A) $(OBJ_B) 
 	
 fclean:	clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: clean all

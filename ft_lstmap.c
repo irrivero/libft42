@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 10:49:26 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 11:12:20 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 10:06:27 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		newn = ft_lstnew(f(lst->content));
 		if (!newn)
 		{
-			ft_lstclear(&new, del);
+			ft_lstclear(&newn, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&newl, newn);
