@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 10:31:52 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 10:40:00 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 10:05:03 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*tem;
 	
 	t = *lst;
+	if (!lst || !*lst || !del)
+		return ;
 	while(t)
 	{
 		tem = t->next;
 		ft_lstdelone(t, del);
-		tem = t;
+		t = tem;
 	}
 	*lst = NULL;
 }
