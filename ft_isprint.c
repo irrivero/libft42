@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:35:54 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 09:28:09 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/17 09:20:23 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c < 32 || c > 127)
+	if (c < 32 || c > 126)
 		return (false);
 	else
 		return (true);
