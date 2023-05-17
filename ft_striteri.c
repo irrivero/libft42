@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 12:04:24 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/11 12:40:39 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/17 09:32:06 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	{
 		while (s[i])
 		{
-			f(s[i], s);
+			f(i, s + i);
 			i++;
 		}
 	}	
