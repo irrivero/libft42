@@ -6,23 +6,23 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:36:24 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 12:53:33 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:54:57 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(char c, const char *s) //cuenta las substrings al dividir s por c
+static int	count_words(char c, const char *s)
 {
 	int	mas;
-	
+
 	mas = 0;
-	while(*s)
+	while (*s)
 	{
 		if (*s != c)
 		{
 			mas++;
-			while(*s && *s != c)
+			while (*s && *s != c)
 				s++;
 		}
 		else
@@ -31,7 +31,7 @@ static int	count_words(char c, const char *s) //cuenta las substrings al dividir
 	return (mas);
 }
 
-static char	*copy(const char *s, char c) //copiar cada substring en su propia ubi de mem
+static char	*copy(const char *s, char c)
 {
 	int		i;
 	char	*word;
@@ -52,20 +52,18 @@ static char	*copy(const char *s, char c) //copiar cada substring en su propia ub
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int		words;
 	int		i;
+	int		words;
 
 	i = 0;
-	words = count_words(c, s); // se recorre s y se cuenta cuantas veces c
-	if (!s)
+	words = count_words(c, s);
+	split = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!split || !s)
 		return (NULL);
-	split = (char **)malloc(sizeof(char *) * (words + 1)); // se reserva la mem para el array con todas las subcadenas y la cadena
-	if (!split)
-		return (NULL);
-	while (i < words) // se recorre la ch buscando c, cada c, se crea una subcadena y se sigue buscando
+	while (i < words && (*s || 1))
 	{
-		while (*s == c)
-			s++;
+		while (*s == c && ++s)
+			;
 		split[i] = copy(s, c);
 		if (!split[i])
 		{
@@ -78,8 +76,8 @@ char	**ft_split(char const *s, char c)
 			s++;
 		i++;
 	}
-	split[i] = NULL; // se agrega el null al final
-	return (split); //se devuelve el pointer
+	split[i] = NULL;
+	return (split);
 }
 /*
 #include <stdio.h>
