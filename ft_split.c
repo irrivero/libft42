@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:36:24 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/22 16:54:57 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:13:31 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,29 +52,24 @@ static char	*copy(const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int		i;
 	int		words;
+	int		i;
 
 	i = 0;
 	words = count_words(c, s);
-	split = (char **)malloc(sizeof(char *) * (words + 1));
-	if (!split || !s)
+	split = malloc(sizeof(char *) * (words + 1));
+	if (!s || !split)
 		return (NULL);
-	while (i < words && (*s || 1))
+	while (*s)
 	{
-		while (*s == c && ++s)
-			;
-		split[i] = copy(s, c);
-		if (!split[i])
+		if (*s != c)
 		{
-			while (i--)
-				free(split[i]);
-			free(split);
-			return (NULL);
+			split[i++] = copy(s, c);
+			while (*s && *s != c)
+				s++;
 		}
-		while (*s && *s != c)
+		else
 			s++;
-		i++;
 	}
 	split[i] = NULL;
 	return (split);

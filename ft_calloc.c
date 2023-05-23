@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 09:36:46 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 13:10:40 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:05:12 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	sbyte;
 	void	*p;
-	
+
 	sbyte = nmemb * size;
 	p = malloc(sbyte);
 	if (p != NULL)

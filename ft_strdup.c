@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 14:09:13 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 13:12:34 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:51:43 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	char *d;
+	char	*d;
 	size_t	len;
 
 	len = ft_strlen(s) + 1;

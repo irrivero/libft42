@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:59:06 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 13:10:00 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:04:42 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	ft_atoi(const char *nptr)
 
 	i = 0;
 	neg = 0;
-	while (nptr[i] && (nptr[i] == 32 || nptr[i] == '\t' || nptr[i] == '\n' || nptr[i] == '\r' || nptr[i] == '\v' || nptr[i] == '\f'))
+	while (nptr[i] && (nptr[i] == 32 || nptr[i] == '\t' || nptr[i] == '\n'
+			|| nptr[i] == '\r' || nptr[i] == '\v' || nptr[i] == '\f'))
 		i++;
 	if (nptr[i] != '\0' && nptr[i] == '-')
 	{
@@ -33,8 +34,8 @@ int	ft_atoi(const char *nptr)
 	while (nptr[i] != '\0' && ft_isdigit(nptr[i]))
 		n = (n * 10) + (nptr[i++] - '0');
 	if (neg == 1)
-		return(-n);
-	return(n);
+		return (-n);
+	return (n);
 }
 /*
 #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 10:44:21 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 10:47:29 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:52:25 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while(lst)
+	while (lst)
 	{
 		(*f)(lst->content);
 		lst = lst->next;

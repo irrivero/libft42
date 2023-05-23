@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 14:44:00 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/17 09:17:24 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:02:37 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@
 # include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
-typedef struct		s_list
+
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-} 					t_list;
+}					t_list;
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);

@@ -15,13 +15,15 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	a;
+	unsigned int	diff;
 
 	a = 0;
 	if (n == 0)
 		return (0);
-	while (s1[a] != '\0' && s1[a] == s2[a] && (a < n - 1))
+	while (s1[a] != '\0' && s2[a] != '\0' && s1[a] == s2[a] && (a < n - 1))
 		a++;
-	return (s1[a] - s2[a]);
+	diff = (unsigned char)s1[a] - (unsigned char)s2[a];
+	return (diff);
 }
 /*
 int	main(void)
