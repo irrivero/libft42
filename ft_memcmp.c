@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:26:08 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/09 09:28:56 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:47:24 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	b;
+	size_t				b;
 	const unsigned char	*str1;
 	const unsigned char	*str2;
 
@@ -24,10 +24,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (b < n)
 	{
 		if (str1[b] != str2[b])
-			return(str1[b] - str2[b]);
+			return (str1[b] - str2[b]);
 		b++;
 	}	
-	return(0);
+	return (0);
 }
 /*
 int	main() 

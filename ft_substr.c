@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:04:22 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/17 09:29:03 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/17 12:26:32 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*sbs;
-	
-	if (!s) //verificar si es nula
+
+	if (!s)
 		return (NULL);
-	if (start > (unsigned int)ft_strlen(s)) //verificar si start esta fuera de s
-		return (ft_strdup("")); // devolver cadena vacia 
+	if (start > (unsigned int)ft_strlen(s))
+		return (ft_strdup(""));
 	i = ft_strlen(s + start);
 	if (i < len)
 		len = i;
-	if (!(sbs = (char *)malloc(sizeof(char) * (len + 1))))
+	sbs = (char *)malloc(sizeof(char) * (len + 1));
+	if (!sbs)
 		return (NULL);
 	ft_strlcpy(sbs, s + start, len + 1);
 	return (sbs);

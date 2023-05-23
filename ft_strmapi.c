@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:26:26 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/11 11:59:03 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:55:34 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*result; //donde almacenar el resultado
-	unsigned int	i; // para iterar sobre los char en s
-	
+	char			*result;
+	unsigned int	i;
+
 	i = 0;
-	if (!s || !f) // checkear si son null
+	if (!s || !f)
 		return (NULL);
-	result = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1)); //asignar memoria
+	result = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!result)
 		return (NULL);
-	while (s[i]) // aplicar la funcion a cada caracter y almacenar result
+	while (s[i])
 	{
 		result[i] = f(i, s[i]);
 		i++;
 	}
-	result[i] = '\0'; //agregar caracter nulo al final
+	result[i] = '\0';
 	return (result);
 }

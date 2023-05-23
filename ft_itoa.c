@@ -6,64 +6,59 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 10:14:13 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/12 12:57:41 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:10:13 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nblen(long nb)
+long int	get_abs(long int nbr)
 {
-	int	l;
+	if (nbr < 0)
+		return (-nbr);
+	else
+		return (nbr);
+}
 
-	l = 0;
-	if (nb < 0)
+int	get_len(long int nbr)
+{
+	int		len;
+
+	if (nbr <= 0)
+		len = 1;
+	else
+		len = 0;
+	while (nbr != 0)
 	{
-		nb = nb * -1;
-		l++;
+		nbr = nbr / 10;
+		len++;
 	}
-	while (nb > 0)
-	{
-		nb = nb / 10;
-		l++;
-	}
-	return (l);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
+	int		len;
+	int		sign;
 	char	*str;
-	long	nb;
-	int		i;
 
-	nb = n;
-	i = ft_nblen(nb);
-	str = (char *) malloc(sizeof(char) * (i + 1));
-	if (!str)
-		return (NULL);
-	str[i--] = '\0';
-	if (nb == 0)
-		str[0] = 48;
-	if (nb < 0)
+	if (n < 0)
+		sign = -1;
+	else
+		sign = 1;
+	len = get_len(n);
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (0);
+	str[len] = '\0';
+	len--;
+	while (len >= 0)
 	{
+		str[len] = '0' + get_abs(n % 10);
+		n = get_abs(n / 10);
+		len--;
+	}
+	if (sign == -1)
 		str[0] = '-';
-		nb = -nb;
-	}
-	while (nb > 0)
-	{
-		str[i--] = 48 + (nb % 10);
-		nb /= 10;
-	}
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-    int num = 123345;
-    char *str = ft_itoa(num);
-    printf("La cadena resultante es: %s\n", str);
-    free(str);
-    return 0;
-}*/

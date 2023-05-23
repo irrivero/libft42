@@ -6,7 +6,7 @@
 /*   By: irivero- <irivero-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:36:51 by irivero-          #+#    #+#             */
-/*   Updated: 2023/05/17 09:22:04 by irivero-         ###   ########.fr       */
+/*   Updated: 2023/05/22 13:25:04 by irivero-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*p_char;
+	int		*null_p;
 
+	null_p = NULL;
 	if (!s)
-		return (NULL);
-	p_char = NULL;
+		*null_p = 42;
+	p_char = 0;
 	while (*s)
 	{
 		if (*s == (char)c)
